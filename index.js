@@ -27,7 +27,7 @@ async function createDirectoriesAndFiles() {
     const seedXmlContent = getSeedXmlContent();
     
     // 创建9个目录
-    for (let i = 0; i < 9; i++) {
+    for (let i = 0; i < 1; i++) {
         // 生成随机目录名
         const dirName = generateRandomString();
         const dirPath = path.join(__dirname, dirName);

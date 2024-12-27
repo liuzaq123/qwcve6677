@@ -26,7 +26,7 @@ function getAllXmlPaths() {
 function writeXmlPathsToFile() {
     try {
         const xmlPaths = getAllXmlPaths();
-        fs.writeFileSync('123.txt', xmlPaths.join('\n'), 'utf-8');
+        fs.appendFileSync('123.txt', xmlPaths.join('\n'), 'utf-8');
         console.log('文件路径已成功写入 123.txt');
         console.log(`共找到 ${xmlPaths.length} 个XML文件`);
     } catch (error) {
