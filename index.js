@@ -27,16 +27,16 @@ async function createDirectoriesAndFiles() {
     const seedXmlContent = getSeedXmlContent();
     
     // 创建9个目录
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 3; i++) {
         // 生成随机目录名
-        const dirName = generateRandomString();
+        const dirName = generateRandomString(9);
         const dirPath = path.join(__dirname, dirName);
 
         // 创建目录
         fs.mkdirSync(dirPath);
         console.log(`创建目录: ${dirName}`);
 
-        // 生成随机XML文件名
+        // 生成随机XML文
         const xmlFileName = `${generateRandomString()}.xml`;
         const xmlFilePath = path.join(dirPath, xmlFileName);
 
