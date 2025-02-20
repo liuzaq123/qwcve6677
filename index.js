@@ -14,10 +14,10 @@ function getSeedXmlContent() {
     } catch (error) {
         console.error('无法读取种子文件 aaa.xml:', error.message);
         return `<?xml version="1.0" encoding="UTF-8"?>
-<root>
-    <timestamp>${new Date().toISOString()}</timestamp>
-    <randomId>${generateRandomString()}</randomId>
-</root>`;
+        <root>
+            <timestamp>${new Date().toISOString()}</timestamp>
+            <randomId>${generateRandomString()}</randomId>
+        </root>`;
     }
 }
 
@@ -27,7 +27,7 @@ async function createDirectoriesAndFiles() {
     const seedXmlContent = getSeedXmlContent();
     
     // 创建9个目录
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 2; i++) {
         // 生成随机目录名
         const dirName = generateRandomString(9);
         const dirPath = path.join(__dirname, dirName);
